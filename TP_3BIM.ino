@@ -8,11 +8,15 @@
     Nombre:
     Apellido:
     Curso:
+
+  Nro de Proto:
   
 Congisgnas
+Se deben comentar cada paso, un código in comentar NO será tomado como válido
   Conexionado:
     En la protoboard, conectar 4 LEDs para que cada uno pueda ser controlado individualmente. Cada LED deberá tener su respectiva resistencia.
     Se debe conectar tambien, un pulsador que permita recibir información de un usuario.
+    IMPORTANTE: tanto cada LED como el boton deberán tener un circuito dedicado (No estar conectados entre sí).
     Indicar a continuación los pines a los cuales se conectó cada elemento y el valor de resistencias utilizado:
       Pines:
         Boton:
@@ -23,26 +27,26 @@ Congisgnas
       Valor:
         R_boton:
         R_LEDs:
+      Modo de conexión del boton: PULL_UP/PULL_DOWN
 
   Progamas:
     Se deben entregar un programa distinto por cada punto. Los programas son una modificación entre ellos.
-    El código deberá estar comentado indicando qué se propone hacer con cada línea de código
-    1.  El primer programa sirve para corroborar la correcta conexión de los elementos de hardware.
-        El mismo deberá encender TODOS los LEDs cuando se presione el pulsador y apagarlos cuando éste se suelte.
-    2.  En el siguiente programa se deberá prender de a UN LED POR VEZ.
-        Por cada pulsación se deberá apagar el LED prendido y prender el LED más próximo de la derecha.
-        En caso de no haber, se deberá volver a empezar la vuelta, empezando desde el LED de la izquierda.
-    3.  A continnuación se desea fabricar un contador binario de 4 bits.
-        El programa deberá contar de 0 a 15 mostrando la cuenta actual a través de los 4 LEDs.
-        Se interpreta 0 si el LED está apagado y 1 si el LED está prendido. 
-        La cuenta aumenta cada vez que el pulsador es presionado, al llegar a 15 deberá volver a empezar en 0.
-        IMPORTANTE: la cuenta debe aumentar UNA SOLA VEZ por cada pulsación.
+    IMPORTANTE: El código deberá estar comentado indicando qué se propone hacer con cada línea de código.
+    1.  El primer programa sirve para corroborar la correcta conexión de los LEDs.
+        Se pide programar un blink (parpadeo). El mismo deberá encender TODOS los LEDs manteniendolos encendidos durante un segundo y medio, y apagarlos por medio segundo.
+    2.  El segundo programa sirve para corroborar la correcta conexión del botón.
+        Se deberán encender TODOS los LEDs cuando el pulsador esté presionado y apagarlos cuando éste se suelte. 
+        La acción de prendido y apagado debe ser instantánea.
+    3.  En el siguiente programa se deberá prender de a UN LED POR VEZ.
+        Por cada pulsación se deberá prender un ÚNICO LED. 
+        Se debe comenzar por el de más a la izquierda y sumar de a uno hasta que los 4 LEDs estén prendidos. 
+        Cuando el pulsador vuelva a ser presionado se deberá volver a comenzar apagando todos los LEDs.
+        NO se debe apagar ningún LED hasta que los 4 se hayan prendido.
     4. Opcional:
-        Utilizando comunicación serie, se desea crear un programa que muestre mediante los LEDs, el nro ingresado en el monitor serie.
-        El programa deberá mostrar el número binario prendiendo los LEDs según el criterio del programa 3.
-        El nro mostrado será ingresado por el usuario mediante el monitor serie.
-        IMPORTANTE: si el nro es mayor a 15 se deberá enviar un mensaje de error. 
-
+        Por cada pulsación se deberá prender un ÚNICO LED. 
+        Se debe comenzar por el de más a la izquierda y sumar de a uno hasta que los 4 LEDs estén prendidos. 
+        Cuando los 4 LEDs estén encendidos, por cada pulsación se deberá apagar un ÚNICO LED por pulsación. 
+        Se debe comenzar por el de más a la derecha y apagar de a uno hasta tener los 4 LEDs apagados.        
 */ 
 
 
